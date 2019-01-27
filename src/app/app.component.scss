@@ -1,0 +1,55 @@
+[hidden]{display:none!important}
+
+table {
+    margin: 5% auto; 
+    border-collapse: collapse;
+    border: 1px solid black;
+    width:80%
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table.player1Table th {
+    background-color: #3f51b5;
+    color: white;
+}
+
+table.player2Table th {
+    background-color: #ff4081;
+    color: white;
+}
+
+.marginLeft {
+    margin-left: 2%;
+}
+
+.headerDiv {
+    text-align:center;
+    padding-bottom: 2%;
+}
+
+.leftDiv {
+    float:left; width:50% ; text-align: center;
+}
+
+.rightDiv {
+    float:right; width:50% ; text-align: center;
+}
+
+.playerBtn {
+    padding: 5% 9%;
+    font-size: xx-large;
+}
+
+.playBtn {
+    padding: 1% 2%;
+    font-size: medium;
+}
+
+.playDiv {
+    text-align:center;
+    clear: both;
+}

@@ -1,0 +1,48 @@
+<div class="headerDiv">
+  <h1>
+    Welcome to The Game of Three!
+  </h1>
+  <img width="200" alt="Game Logo" src="../assets/game.PNG">
+  <h2>Choose one player to begin!</h2>
+</div>
+<div class="leftDiv">
+  <button class="playerBtn" mat-raised-button color="primary" (click)="choosePlayer(1)" [disabled]="endGame">Player 1</button>
+  <span  class="marginLeft" [hidden]="!player1">Number sent to player 2: {{initialNum}}</span>
+  <table [hidden]="!endGame" class="player1Table">
+    <tr>
+      <th>Move No.</th>
+      <th>Received</th>
+      <th>Added</th>
+      <th>Resulting Number</th>
+    </tr>
+    <tr *ngFor="let data of player1Data">
+      <td>{{data.moveNum}}</td>
+      <td>{{data.received}}</td>
+      <td>{{data.added}}</td>
+      <td>{{data.resultingNumber}}</td>
+    </tr>
+  </table>
+</div>
+<div class="rightDiv">
+  <button class="playerBtn" mat-raised-button color="accent" (click)="choosePlayer(2)" [disabled]="endGame">Player 2</button>
+  <span class="marginLeft"  [hidden]="!player2">Number sent to player 1: {{initialNum}}</span>
+  <table [hidden]="!endGame" class="player2Table">
+    <tr>
+      <th>Move No.</th>
+      <th>Received</th>
+      <th>Added</th>
+      <th>Resulting Number</th>
+    </tr>
+    <tr *ngFor="let data of player2Data">
+      <td>{{data.moveNum}}</td>
+      <td>{{data.received}}</td>
+      <td>{{data.added}}</td>
+      <td>{{data.resultingNumber}}</td>
+    </tr>
+  </table>
+</div>
+<div class="playDiv">
+  <button class="playBtn" mat-raised-button color="warn" (click)="reset()" [hidden]="!endGame">Play Again!</button>
+</div>
+
+<router-outlet></router-outlet>
