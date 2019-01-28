@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   ngOnInit() { }
 
   choosePlayer(player: number) {
-    this.initialNum = Math.floor(Math.random() * 1000) + 2;
+    this.initialNum = Math.floor(Math.random() * 100000) + 2;
     player === 1 ? this.player1 = true : this.player2 = true;
     this.sendToPlayer(this.initialNum, player);
   }
